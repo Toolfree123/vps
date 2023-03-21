@@ -29,7 +29,7 @@ jobs:
       - name: Change pass for RDP.
         env: 
           ADMINPASSWORD: ${{ secrets.ADMINPASSWORD }}
-        run: net user runneradmin $Env:ADMINPASSWORD
+        run: net user runneradmin $Env:kydep@12
         
       - name: Get Ngrok 
         run: Invoke-WebRequest http://localhost:4040/api/tunnels
