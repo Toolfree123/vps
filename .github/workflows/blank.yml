@@ -27,8 +27,6 @@ jobs:
           Set-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp' -name "UserAuthentication" -Value 1
         
       - name: Change pass for RDP.
-        env: 
-          ADMINPASSWORD: ${{ secrets.ADMINPASSWORD }}
         run: net user runneradmin $Env:kydep@12
         
       - name: Get Ngrok 
